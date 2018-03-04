@@ -1,1 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
 
+html,body{
+	margin: 0;
+	padding:0;
+	height:100%;
+  	background-color:#73CE5F;
+}
+
+body{
+	font-family: arial,sans-serif;
+	font-size: 11px;
+	text-align: center;
+
+}
+
+div#container{
+	position:relative;
+	height:100%;
+	width:100%;
+	z-index:0;
+}
+
+div#message_box{
+	position:relative;
+	z-index:100;
+	height:100%;
+	width:100%;
+  	background-color:#73ce5f;
+	padding-top:3%;
+	margin:auto;
+}
+
+div#addButton{
+	position:relative;
+	height:50px;
+	width:50px;
+	border-radius:50%;
+	background-color:#0b5b3e;
+	margin:auto;
+	margin-top:5%;
+	z-index:101;
+}
+
+div#startButton{
+	position:relative;
+	height:auto;
+  	min-height: 50px;
+	width:120px;
+	border-radius:10%;
+	background-color:#0b5b3e;
+	margin:auto;
+	margin-top:5%;
+	z-index:101;
+}
+
+.saveButton {
+	position:relative;
+	color:#FFFFFF;
+	font-size:0.3em;
+	text-decoration:none;
+	line-height:50px;
+	height:50px;
+	width:100px;
+	border-radius:10%;
+	background-color:#0b5b3e;
+	margin:auto;
+	margin-top:5%;
+	z-index:101;
+}
+
+.textButton, .plusButton{
+	color:#FFFFFF;
+	text-decoration:none;
+	line-height:50px;
+}
+
+.textButton{
+	font-size:0.3em;
+}
+
+.plusButton{
+	font-size:4em;
+}
+
+.huge_mesagge{
+	font-size:9vmin;
+	color:#FFFFFF;
+	margin:0 auto;
+	text-decoration:none;
+}
+
+form input, form textarea, form select {
+	margin:0 auto;
+	border-width: 0;
+	font-size:9vmin;
+	margin-top:4%;
+	width:90%;
+}
