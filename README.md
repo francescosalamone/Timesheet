@@ -6,7 +6,8 @@ For use this web app, you need first of all to create a mysql DB, with two table
 
 ## project:
 id = int, primary, auto_increment, not Null
-name = varchar(45), not Null
+
+namename = varchar(45), not Null
 
 ## times:
 id = int, primary, auto_increment, not Null
