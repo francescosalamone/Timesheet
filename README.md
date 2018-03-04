@@ -11,8 +11,11 @@ namename = varchar(45), not Null
 
 ## times:
 id = int, primary, auto_increment, not Null
+
 project = int, not Null
+
 time_start = Datetime, not Null
+
 time_end = Datetime, can be Null
 
 # Configuration
