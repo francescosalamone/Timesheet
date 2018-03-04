@@ -1,1 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Timesheet management</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+  </head>
+
+  <body>
+
+    <div id="container">
+        <span class="huge_mesagge">
+            {#DATA_TO_INSERT#}
+            {#WHILE_THERE_ARE_PROJECTS#}
+                <a href='?show_detail={#ID_PROJECT#}' class='textButton'>				 <div id="startButton">
+                        Details >
+                    </div>
+                </a>
+                <br/>
+            {#END_WHILE_THERE_ARE_PROJECTS#}
+            {#IF_NEW_PROJECT#}
+                <form name="form" action="?insert_project" method="post">
+                    <input name="project_name" type="text"/>
+                    <input type="submit" value="Save"  class="saveButton"/>
+                </form>
+            {#END_IF_NEW_PROJECT#}
+            {#IF_START_COUNT#}
+                <a href="?start_count={#ID_START_COUNT#} "class="textButton">
+                    <div id="startButton">
+                        Start
+                    </div>
+                </a>
+            {#END_IF_START_COUNT#}
+            <p id="message">
+            </p>
+            {#IF_TIMER_START#}
+                <a href="?stop_count={#ID_STOP_COUNT#} "class="textButton">
+                    <div id="startButton">
+                        Stop
+                    </div>
+                </a>
+            {#END_IF_TIMER_START#}
+        </span>
+        {#IF_CIRCLE_BUTTON#}
+            <a href="{#CIRCLE_BUTTON_ADD#}" class="plusButton">
+                <div id="addButton">
+                    +
+                </div>
+            </a>
+        {#END_IF_CIRCLE_BUTTON#}
+
+        <span class="huge_mesagge">
+            <a href="index.php" class="textButton">
+                <div id="startButton">
+                    Go to Home
+                </div>
+            </a>
+        </span>
+
+    </div>
+    {#IF_TIMER_START#}
+        <script src="js/timer.js" starttime="{#TIME_FOR_JS#}">
+        </script>
+    {#END_IF_TIMER_START#}
+  </body>
+</html>
